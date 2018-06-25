@@ -36,15 +36,15 @@ We design a test to determine if the angular emission during the ringdown of a K
 
 \section{Spherical Harmonic Decomposition}
 
-Quasi-circular Binary black hole waveforms depend on 15 parameters: the BH masses $m_1$ and $m_2$ (We will often parameterize these masses with the total mass $M=m_1+m_2$ and the symmetric mass ratio $\nu =m_1m_2/M^2$); the BH spins $\vec s_i$; two angles localizing the source, i.e. the declination $\delta$, and the right ascension $\alpha$; three angles specifying the direction of the source, i.e. the inclination of the orbit relative to the line of sight $\iota$, the polarization angle $\psi$ (these angles are defined in appendix \ref{sec:coor}), and a phase $\phi_*$ that defines the orientation of the binary around its angular momentum (for example, this phase might be defined as the phase at coelescence $\phi_c$); the arrival time $t_*$; and the distance $d$ to the source. We will collectively refer to these ``GR'' parameters as $\lambda^i$ and use i as an index that runs of over the GR parameters. 
+Quasi-circular Binary black hole waveforms depend on 15 parameters: the BH masses $m_1$ and $m_2$ (We will often parameterize these masses with the total mass $M=m_1+m_2$ and the symmetric mass ratio $\nu =m_1m_2/M^2$); the BH spins $\vec s_i$; two angles localizing the source, i.e. the declination $\delta$, and the right ascension $\alpha$; three angles specifying the direction of the source, i.e. the inclination of the orbit relative to the line of sight $\iota$, the polarization angle $\psi$ (these angles are defined in appendix \ref{sec:coor}), and a phase $\phi_*$ that defines the orientation of the binary around its angular momentum (for example, this phase might be defined as the phase at coelescence $\phi_c$); the arrival time $t_*$; and the proper distance $d$ to the source. We will collectively refer to these ``GR'' parameters as $\lambda^i$ and use i as an index that runs of over the GR parameters. 
 
-In the wave frame\footnote{The wave frame is defined in appendix \ref{sec:coor}}, the waveform can be decomposed in spin weighted spherical harmonics
+First consider an observer in the local wave frame where redshift can be ignored. In the wave frame\footnote{The wave frame is defined in appendix \ref{sec:coor}}, the waveform can be decomposed in spin weighted spherical harmonics
 \begin{align}
 \tilde H(f;\nu,M,\vec s_1,\vec s_2, d,\iota,t_*,\phi_*)
 &\equiv \tilde h_+-i\tilde h_\times \nonumber \\
 &=\frac{GM}{c^2d}\sum_{\ell =2}^\infty \sum_{m=-\ell}^\ell \tilde h_{\ell m}\left(f;M, \nu, s_1,s_2\right)\Ys(\iota, 0)e^{-2\pi i f t_* -im\phi_*} \label{eq:dec}
 \end{align}
-To include the effect of redshift all parameters with time dimension $\mathcal{T}^p$ should be multiplied by $(1+z)^p$, i.e. the mass $M\to M_z=(1+z)M$ becomes the redshifted mass (and the M on the RHS is the mass measured in the rest frame) and the distance $d\to d_L=d(1+z)^p$ becomes the luminosity distance (and the d on the RHS is the proper distance). Note that the frequency is not redshifted with this prescription \cite{Berti:2005ys}.
+For observers at cosmological distances, we must include the effect of redshift .To include the effect of redshift all parameters with length dimension $\mathcal{L}^p$ should be multiplied by $(1+z)^p$, i.e. the mass $M\to M_z=(1+z)M$ becomes the redshifted mass (and the M on the RHS is the mass measured in the rest frame) and the proper distance $d\to d_L=d(1+z)^p$ becomes the luminosity distance (and the d on the RHS is the proper distance). Note that the frequency is not redshifted with this prescription \cite{Berti:2005ys,Flanagan:1997sx}.
 
 As is discussed in appendix \ref{sec:coor}, we orient our source frame so that observer has an azimuthal angle of of $0$.
 The spherical harmonic modes $h_{\ell m}$ only depend on the masses and the spin parameters. The factor of $e^{-2\pi if t_*}$ is the frequency domain version of a shifted start time\footnote{using the convention $\tilde H= \int dt e^{-2\pi i ft}H(t)$.}. The dependence on $\phi_*$ comes from the fact that if we rotate the binary by $\phi_*$ in the azimuthal direction, we get the same waveform as before with $\phi \to \phi-\phi_*$. Since the spin-weight spherical harmonics $\propto e^{im \phi}$, we can parameterize the waveforms of rotated binaries with the factor $e^{-im\phi_*}$.
@@ -71,11 +71,11 @@ At all times general relativity predicts a unique relationship between the spher
 
 In the time domain, the ringdown portion of the waveform starts at approximately $t\approx t_R$, where $t_R$ is chosen to be slightly after the peak of the waveform. During the ringdown, general relativity predicts that the waveform is well-approximated by a QNM sum\footnote{Note that I am following London et. al. and using the unconventional sign convention $e^{i\omega_\mul}$ rather than $e^{-i\omega_\mul}$}, i.e in the wave frame \footnote{The wave frame is defined in appendix \ref{sec:coor}. Note that we have made the assumption that the observer is located at an azimuthal angle of 0 relative to the source and that this assumption does not fix the orientation of the source because we have the freedom to change the coalescence phase. Also note that $\psi_4= \ddot H$.}
 \begin{align}
-H_{\rm ring}^{GR}=h_+-ih_\times=\frac{GM}{dc^2}\sum_{\ell m n_{\pm}}\frac{-A_{\ell m n_{\pm}}}{\omega_\mul^2}e^{i\omega_{\ell m n_{\pm}}(t-t_*-t_R)}\Sph(\iota,0)\theta(t-t_*-t_R)e^{-im\phi_*},
+H_{\rm ring}^{GR}=h_+-ih_\times=\frac{GM}{dc^2}\sum_{\ell m n_{\pm}}B_{\ell m n\pm}e^{i\omega_{\ell m n_{\pm}}(t-t_*-t_R)}\Sph(\iota,0)\theta(t-t_*-t_R)e^{-im\phi_*},
 \end{align}
 %where $\tau =t-t_*-t_R$
 
-The QNM frequencies $\omega_\mul$ and angular functions $\Sph(\theta, \phi)$, which are known as spin-weighted spheroidal harmonics, can be calculated from the Teukolsky equation. They are indexed by spheroidal harmonic multipoles $\ell$ and m and an overtone $n_\pm$. The subscript $\pm$ refers to the co-rotating and counter rotating QNM frequencies. The complex amplitudes $A_\mul$ are difficult to predict from first principals but have been obtained by fitting numerical relativity waveforms. London et al. \cite{London:2014cma} have provided fits as functions of symmetric mass ratio $\nu=\frac{m_1m_2}{(m_1+m_2)^2}$ for the $A_{\ell m n_\pm}$. For the $(\ell m n) =220+$ mode from Eq. 2\footnote{Recall with London's convention (which we follow here as well) that uses $e^{i\omega_{220}t}$ for the time dependence of each ringdown mode, the QNM's have a positive imaginary part. Also not London appears to have oriented his binary so $A_{220+}/\omega_{220+}^2$ is real}
+The QNM frequencies $\omega_\mul$ and angular functions $\Sph(\theta, \phi)$, which are known as spin-weighted spheroidal harmonics, can be calculated from the Teukolsky equation. They are indexed by spheroidal harmonic multipoles $\ell$ and m and an overtone $n_\pm$. The subscript $\pm$ refers to the co-rotating and counter rotating QNM frequencies. The complex amplitudes $B_\mul$ are difficult to predict from first principals but have been obtained by fitting numerical relativity waveforms. London et al. \cite{London:2014cma} have provided fits as functions of symmetric mass ratio $\nu=\frac{m_1m_2}{(m_1+m_2)^2}$ for the $A_{\ell m n_\pm}=-\omega_{\ell mn\pm}^2sM_{\rm remnant}B_{\ell mn \pm}$. For the $(\ell m n) =220+$ mode from Eq. 2\footnote{Recall with London's convention (which we follow here as well) that uses $e^{i\omega_{220}t}$ for the time dependence of each ringdown mode, the QNM's have a positive imaginary part. Also not London appears to have oriented his binary so $A_{220+}/\omega_{220+}^2$ is real}
 %\footnote{Note that I have used a slightly different convention than london, i.e. $A_{\ell m n}^{rm here}=A_{\ell m n}^{rm London}$},
 \begin{align}
 A_{220+}=\omega_{220+}^2\left(0.9252 \nu +0.1323\nu^2 \right)
@@ -86,7 +86,7 @@ To use this formula, we must calculate $\omega_{220+}$ with the final black hole
 A measurement of the $h_{\ell m}$ is equivalent to a measurement of the spheroidal harmonics.
 If we assume a single mode ringdown, dominated by the $\mul=220_+$ mode, the ringdown waveform can be re-expanded in spin weight spherical harmonics $\Ys$
 \begin{align}
-H_{\rm ring}=\frac{GM}{dc^2}\sum_{\ell}\frac{-A_{220+}}{\omega_{220+}^2}e^{i\omega_{220+}(t-t_*-t_R)}\sigma_{220_+\ell }{}_{-2}Y_{\ell 2}(\iota,0) \theta(t-t_*-t_R)e^{-im\phi_*},
+H_{\rm ring}=\frac{GM}{dc^2}\sum_{\ell}B_{\ell m n \pm}e^{i\omega_{220+}(t-t_*-t_R)}\sigma_{220_+\ell }{}_{-2}Y_{\ell 2}(\iota,0) \theta(t-t_*-t_R)e^{-im\phi_*},
 \end{align}
 where we have used the expansion of the spheroidal harmonics\footnote{Note that Berti et al. \cite{Berti:2014fga} have calculated $u_{m\ell \ell'n}=\sigma_{\ell'mn\ell}^*$. We use Berti's data in our calculations.}
 \begin{align}
@@ -98,7 +98,7 @@ Hence we see that general relativity predicts that\footnote{We set $t_*=0$ to be
 h_{\ell m}(t)=
 \begin{cases}
 0 & m\neq 2 \\
-\frac{-A_{220+}}{\omega_{220+}^2} \sigma_{220_+\ell }e^{i\omega_{220+}(t-t_R)}
+B_{\ell m n\pm}\sigma_{220_+\ell }e^{i\omega_{220+}(t-t_R)}\theta(t-t_R)
 \end{cases}
 \end{align}
 
@@ -181,11 +181,11 @@ h_{(A)}(t)&=\Re\left[(G^{(A)}_+-iG^{(A)}_\times)H(t-\tau )\right] \\
 &=\frac{GM}{2dc^2}\sum_{\ell =2}^\infty\sum_{m=-\ell}^{\ell} \nonumber \\
 &\left[(G^{(A)}_+-iG^{(A)}_\times)h_{\ell m}([t-t_*-\tau_{(A)}]/M)\Ys(\iota,0)e^{-im\phi_*} 
 +(G^{(A)}_++iG^{(A)}_\times)h_{\ell m}^*([t-t_*-\tau_{(A)}]/M)\Ys^*(\iota,0)e^{im\phi_*}\right]
-\\
-&=\frac{GM}{2dc^2}\sum_{\ell =2}^\infty\sum_{m=-\ell}^{\ell}\Ys(\iota,0)e^{-im\phi_*}\left[(G^{(A)}_+-iG^{(A)}_\times)h_{\ell m}([t-t_*-\tau_{(A)}]/M)+(G^{(A)}_++iG^{(A)}_\times)h_{\ell -m}^*([t-t_*-\tau_{(A)}]/M)\right],
-\label{eq:restrain}
+%\\
+%&=\frac{GM}{2dc^2}\sum_{\ell =2}^\infty\sum_{m=-\ell}^{\ell}\Ys(\iota,0)e^{-im\phi_*}\left[(G^{(A)}_+-iG^{(A)}_\times)h_{\ell m}([t-t_*-\tau_{(A)}]/M)+(-1)^m(G^{(A)}_++iG^{(A)}_\times)h_{\ell -m}^*([t-t_*-\tau_{(A)}]/M)\right],
+%\label{eq:restrain}
 \end{align}
-where to arrive at the final line, we used ${}_{-2}Y_{\ell m}^*(\theta ,\phi)={}_{-2}Y_{\ell -m}(\theta ,\phi)$.
+Also note that ${}_{-2}Y_{\ell m}^*(\theta ,\phi)=(-1)^m{}_{-2}Y_{\ell -m}(\pi-\theta ,\phi)$.
 
 To get the frequency domain version of the strain in terms of the spherical harmonic modes, it is useful to note that the fourier transform of the complex conjugate is the complex conjugate of the fourier transform evaluated at $-f$, i.e
 \begin{align}
@@ -199,12 +199,12 @@ Hence
 \begin{align}
 \tilde h_{(A)}(f)&=\frac{GM}{2dc^2}\sum_{\ell =2}^\infty\sum_{m=-\ell}^{\ell}e^{-2\pi i f(t_*+\tau_{(A)})} \nonumber \\
 &\left[(G^{(A)}_+-iG^{(A)}_\times)\tilde h_{\ell m}(Mf)\Ys(\iota,0)e^{-im\phi_*}+(G^{(A)}_++iG^{(A)}_\times)\tilde h_{\ell m}^*(-Mf)\Ys^*(\iota,0)e^{im\phi_*}\right] \label{eq:hsph1}
-\\
-&=\frac{GM}{2dc^2}\sum_{\ell =2}^\infty\sum_{m=-\ell}^{\ell}\Ys(\iota,0)e^{-im\phi_*}e^{-2\pi i f(t_*+\tau_{(A)})}
-\left[(G^{(A)}_+-iG^{(A)}_\times)\tilde h_{\ell m}(Mf)+(G^{(A)}_++iG^{(A)}_\times)\tilde h_{\ell -m}^*(-Mf)\right] \label{eq:hsph}
+%\\
+%&=\frac{GM}{2dc^2}\sum_{\ell =2}^\infty\sum_{m=-\ell}^{\ell}\Ys(\iota,0)e^{-im\phi_*}e^{-2\pi i f(t_*+\tau_{(A)})}
+%\left[(G^{(A)}_+-iG^{(A)}_\times)\tilde h_{\ell m}(Mf)+(-1)^m(G^{(A)}_++iG^{(A)}_\times)\tilde h_{\ell -m}^*(-Mf)\right] \label{eq:hsph}
 \end{align}
 
-In practice, when we model waveforms we will truncate the number of modes that we use and Eq.~\eqref{eq:hsph1} may be more useful than Eq.~\eqref{eq:hsph}.
+%In practice, when we model waveforms we will truncate the number of modes that we use and Eq.~\eqref{eq:hsph1} may be more useful than Eq.~\eqref{eq:hsph}.
 
 % It is convenient to write the TT gauge metric perturbation $h_{ij}$ with it's value referred to the center of the earth in the wave frame. The wave frame is shown in figure...
 
